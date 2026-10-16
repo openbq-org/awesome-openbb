@@ -202,6 +202,26 @@ This section highlights mock apps built for learning and prototyping inside the 
 
 <img width="600" src="adanos-screenshot.png" />
 
+---
+
+**OpenBQ yfinance**: Apache-2.0 Yahoo Finance provider and router extension for OpenBB V5, written against the public yfinance API. Covers historical prices across asset classes, quotes, long-form financial statements, option chains, profiles, corporate actions, estimates, ownership, calendars, news, filings, funds, screens and market status. Do not install alongside `openbb-yfinance`; both register provider `yfinance`.
+- Open source: [github.com/Adventures-OpenBQ/openbq-yfinance](https://github.com/Adventures-OpenBQ/openbq-yfinance)
+- PyPI: [openbq-yfinance](https://pypi.org/project/openbq-yfinance/)
+- Install: `pip install openbq-yfinance`
+- OpenBB usage: `obb.yfinance.equity.historical(symbol="AAPL")` or `obb.yfinance.options.chains(symbol="AAPL")`
+- API required: None
+- Author: [artcashin](https://github.com/artcashin)
+
+---
+
+**OpenBQ EODHD**: EODHD provider extension for OpenBB V5. Historical equity, ETF, crypto and FX prices (daily and intraday), fundamentals and financial statements, dividends, splits, ownership, insider trading and analyst estimates, mounted as its own `obb.eodhd.*` namespace.
+- Open source: [github.com/Adventures-OpenBQ/openbq-eodhd](https://github.com/Adventures-OpenBQ/openbq-eodhd)
+- PyPI: [openbq-eodhd](https://pypi.org/project/openbq-eodhd/)
+- Install: `pip install openbq-eodhd`
+- OpenBB usage: `obb.eodhd.equity.price.historical(symbol="AAPL.US")`
+- API required: Set `EODHD_API_KEY` in the environment ([eodhd.com](https://eodhd.com); the `demo` token works for AAPL.US, MCD.US, TSLA.US and VTI.US)
+- Author: [artcashin](https://github.com/artcashin)
+
 
 ## Agents
 
